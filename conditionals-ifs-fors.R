@@ -57,4 +57,42 @@ switch(species,
        "cat" = print("meow"),
        "dog" = print("WOOF!"),
        "mouse" = print("squeeaakkkk"))
-  
+# writing for loops
+
+dog_names <- c("Teddy", "Khora", "Banjo", 'Waffle')
+
+for (pupster in dog_names) {
+  print(paste("My dog's name is", pupster))
+}
+
+# another for loop
+
+mass <- seq(from = 0, to = 3, by = 0.5)
+
+#practicing writing the body of the for loop
+i <- mass [1]
+i
+new_value <- i + 2
+new_value
+
+# write into a for loop
+
+for(i in mass){
+  new_value <- i + 2
+  print(new_value)
+}
+
+#practice same example with indexing
+i <- 1
+new_value <- mass[i] + 2
+new_value
+
+#write into for loop
+
+for(i in 1:length(mass)){
+  new_value <- mass[i] + 2
+  print(new_value)
+}
+
+
+
