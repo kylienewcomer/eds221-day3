@@ -103,3 +103,46 @@ for(i in seq_along(tree_height)) {
   print(sum_tree)
 }
 
+# for loops with conditional statements
+
+animal <- c("cat", "dog", "dog", "zebra", "dog")
+one_animal <- animal[1]
+if(one_animal == "dog"){
+  print("I love dogs")
+  } else {
+    print("these are other animals")
+  }
+
+
+for(i in seq_along(animal)){
+  if(animal[i] ==  "dog"){
+    print("I love dogs")
+  } else
+    print("these are other animals")
+}
+
+#another for loop example with conditionals
+
+species <- c("dog", "elephant", "goat", "dog", 'dog', "elephant")
+
+#respective ages in human years
+human_age <- c(3, 8, 4, 6, 12, 18)
+
+#convert to respective age in animal years
+#1 human year = 7 dog years
+# 1 human year = 0.88 elephant years
+# 1 human year = 4.7 goat years
+
+rm(animal_age)
+
+for(i in seq_along(species)){
+  if(species[i] == "dog") {
+    animal_age <- human_age[i] * 7
+  } else if(species[i] == "elephant") {
+    animal_age <- human_age[i] * 0.88
+  } else if(species[i] == "goat")
+    animal_age <- human_age[i] * 4.7  
+print(animal_age)
+}
+
+
