@@ -94,5 +94,12 @@ for(i in 1:length(mass)){
   print(new_value)
 }
 
+# another example
 
+tree_height <- c(1,2,6,10)
+
+for(i in seq_along(tree_height)) {
+  sum_tree <- tree_height[i] + tree_height[i+1]
+  print(sum_tree)
+}
 
