@@ -155,4 +155,29 @@ for(i in seq_along(tigers)){
   big_cats[i] <- total_cats
 }
 
+# create vectors to store values
+mean_mtcars <- vector(mode = "numeric", length = ncol(mtcars))
+for(i in 1:ncol(mtcars)){
+  mean_mtcars[i] <- mean(mtcars[[i]], na.rm = TRUE)
+}
 
+library(palmerpenguins)
+
+for(i in seq_along(penguins)){
+if(is.numeric(penguins[[i]])) {
+  penguin_median <- median(penguins[[i]], na.rm = TRUE)
+} else 
+  print("data not numeric")
+}
+
+
+# apply() function iterates over columns or rows
+
+#rewrite our for loop for finding mean values of the columns in mtcars
+apply(X = mtcars, MARGIN = 2, FUN = mean)
+
+library(tidyverse)
+
+penguins %>%
+  group_by(species) %>% 
+  summarise(across(where(is.numeric), mean, na.rm = TRUE))
